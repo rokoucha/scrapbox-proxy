@@ -1,0 +1,30 @@
+{
+  "name": "scrapbox-proxy",
+  "version": "0.0.1",
+  "description": "Deno で Scrapbox にアクセスするためのプロキシ",
+  "main": "dist/index.ts",
+  "repository": "ssh://git@github.com/rokoucha/scrapbox-proxy.git",
+  "author": "Rokoucha <npm@rokoucha.net>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "koa": "^2.11.0",
+    "koa-logger": "^3.2.1",
+    "koa-response-time": "^2.1.0",
+    "koa-router": "^8.0.7"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.0",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-response-time": "^2.1.0",
+    "@types/koa-router": "^7.4.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node ./src/index.ts",
+    "format": "prettier --write \"./src/**/*.ts\""
+  }
+}

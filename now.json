@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "Scrapbox Proxy",
+  "alias": ["scrapbox-proxy.now.sh"],
+  "builds": [
+    {
+        "src": "src/**/*.ts",
+        "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts"
+    }
+  ],
+  "env": {
+    "IS_NOW": "yes"
+  }
+}
